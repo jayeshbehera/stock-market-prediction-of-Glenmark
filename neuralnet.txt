@@ -1,0 +1,12 @@
+library(neuralnet)
+library(forecast)
+c=scan("clipboard")
+train.ts=ts(c)
+v=scan("clipboard")
+a.ts=ts(v)
+x <- nnetar(train.ts,p=11,P=1)
+summary(x$model[[1]])
+f=forecast(x)
+f
+n=accuracy(f,a.ts)
+plot(f)

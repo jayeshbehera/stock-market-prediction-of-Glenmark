@@ -1,0 +1,27 @@
+#TIME SERIES 
+It is series of correlation observation made over time. 
+Data for our project is depending only on time so time series methodology is most appropriate way to analyse this data. 
+The basic requirement of time series is stationarity.
+#A series xt is said to be (weakly) stationary if it satisfies the following properties:
+The mean E(xt) is the same for all t.(no trend)
+The variance of xt is the same for all t.(no variability)
+The covariance (and also correlation) between xt and xt-h is the same for all t.(covarience is function of distance |t-s| only.
+Some important questions to first consider when first looking at a time series are:
+Is there a trend, meaning that, on average, the measurements tend to increase (or decrease) over time?
+Is there seasonality, meaning that there is a regularly repeating pattern of highs and lows related to calendar time such as seasons, quarters, months, days of the week, and so on?
+Are their outliers? In regression, outliers are far away from your line. With time series data, your outliers are far away from your other data.
+Is there a long-run cycle or period unrelated to seasonality factors?
+Is there constant variance over time, or is the variance non-constant?
+Are there any abrupt changes to either the level of the series or the variance?
+Descriptive statistics
+Mean, standard deviation and coefficient of variation are used to compared rainfall variation decade wise
+#Seasonality in a time series is a regular pattern of changes that repeats over S time periods, where S defines the number of time periods until the pattern repeats again.
+Differencing
+Almost by definition, it may be necessary to examine differenced data when we have seasonality.  Seasonality usually causes the series to be nonstationary because the average values at some particular times within the seasonal span (months, for example) may be different than the average values at other times. 
+In a seasonal ARIMA model, seasonal AR and MA terms predict xt using data values and errors at times with lags that are multiples of S (the span of the seasonality).
+# Types of Models
+There are two basic types of “time domain” models.
+Models that relate the present value of a series to past values and past prediction errors - these are called ARIMA models (for Autoregressive Integrated Moving Average).  Ordinary regression models that use time indices as x-variables.  These can be helpful for an initial description of the data and form the basis of several simple forecasting methods.
+#ARIMA 
+The genral ARIMA model is ARIMA (p, d,q)
+ Where p is order of AR model,d is order of differencing to get stationary series,q is order of MA model.
